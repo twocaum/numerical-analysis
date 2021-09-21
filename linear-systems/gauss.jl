@@ -1,7 +1,7 @@
 
 using LinearAlgebra
 
-function gauss_jacobi(A::Matrix{Float16}, B::Vector{Float16}, x::Vector{Float16}, e=0.0001::Float16)
+function gauss_jacobi(A::Matrix{Float64}, B::Vector{Float64}, x::Vector{Float64}, e=0.0001::Float64)
     n, m = size(A)
     
     if n != m
@@ -25,7 +25,7 @@ function gauss_jacobi(A::Matrix{Float16}, B::Vector{Float16}, x::Vector{Float16}
 end
 
 
-function gauss_seidel(A::Matrix{Float16}, B::Vector{Float16}, x::Vector{Float16}, e=0.0001::Float16, maxit=typemax(Int64)::Int64)
+function gauss_seidel(A::Matrix{Float64}, B::Vector{Float64}, x::Vector{Float64}, e=0.0001::Float64, maxit=typemax(Int64)::Int64)
     n, m = size(A)
     
     if n != m
