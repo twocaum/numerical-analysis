@@ -44,12 +44,6 @@ function gauss_seidel(A::Matrix{Float16}, B::Vector{Float16}, x::Vector{Float16}
         grad = x - x_0
         err = norm(grad)
         
-        println("i = $i")
-        println("x$i : $x")
-        println("grad : $grad")
-        println("err : $err")
-        println("")
-
         if err <= e
             break
         end
